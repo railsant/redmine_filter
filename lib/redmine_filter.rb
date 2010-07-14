@@ -26,15 +26,9 @@ module RedmineFilter
   end
   
   def define_query(filters={})
-    #options ||= {
-    #               "created_at"     => {:type => :date_past},
-    #               "updated_at"     => {:type => :date_past}
-    #             }
-    #self.query = Query.new
-    #query.available_filters = filters
-    
     context = 'query_' + controller_name.to_s
-    
+
+    self.query.filters = {}    
     if params[:set_filter] || session[context].nil? 
       # Give it a name, required to be valid
       #query = Query.new(:name => "_")
