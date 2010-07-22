@@ -34,8 +34,8 @@ class Query
 	return @available_filters if @available_filters
 	@available_filters = { 
                            #"status" => { :type => :list_status, :order => 1 , :values => %w{0 1}},
-                           "created_at" => { :type => :date_past, :order => 2 },
-                           "updated_at" => { :type => :date_past, :order => 3 },
+                           "created_at" => { :type => :date_past, :order => 100 },
+                           "updated_at" => { :type => :date_past, :order => 100 },
 				}
 
   end
